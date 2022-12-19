@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: goldenrod;
+
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+}
+
+.carousel-content .box {
+    width: 180px;
+    background-color: #ffffff;
+    margin-right: 1rem;
+    padding: 1.2rem;
+    border-radius: 5px;
+}
+
+.carousel-container .controls .btn {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #dddd;
+    outline: none;
+    border: none;
+
+    transform: translateY(-50%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3 ease;
+}
+
+.controls .btn.show {
+    transform: translateY(-50%) scale(1);
+    visibility: visible;
+    opacity: 4;
+}
+
+.left {
+    left: 0.5rem;
+}
+
+.right {
+    right: 0.5rem;
+}
